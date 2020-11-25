@@ -1,10 +1,12 @@
 // import './App.css';
-import Standard from './Components/02-parent-child/Standard';
+import './Resources/CSS/Todo.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Todo from "./Components/Todo-Application/Todo";
 
 function App() {
   return (
     <div className="App">
-      <Standard/>
+      <Todo/>
     </div>
   );
 }

@@ -2,13 +2,15 @@
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactEnd from './Components/03-props/Walkthrough/04-End-Contact';
+import User from './Components/03-props/static-data/User';
 
 
 
 function App() {
   return (
     <div className="App">
-      <ContactEnd/>
+      {/* <ContactEnd/> */}
+      <User/>
     </div>
   );
 }

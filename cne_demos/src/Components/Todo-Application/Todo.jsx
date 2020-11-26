@@ -17,8 +17,8 @@ const Todo = () => {
         </div>
         <div>
             <RBButton/>
-            </div>
-            </>
+        </div>
+        </>
     );
 }
 

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 214,
+    "type": "general",
+    "setup": "What do you call a duck that gets all A's?",
+    "punchline": "A wise quacker."
+  },
+  {
+    "id": 65,
+    "type": "general",
+    "setup": "Well...",
+    "punchline": "That’s a deep subject."
+  },
+  {
+    "id": 337,
+    "type": "general",
+    "setup": "Why did the cowboy have a weiner dog?",
+    "punchline": "Somebody told him to get a long little doggy."
+  },
+  {
+    "id": 72,
+    "type": "programming",
+    "setup": "I was gonna tell you a joke about UDP...",
+    "punchline": "...but you might not get it."
+  },
+  {
+    "id": 285,
+    "type": "general",
+    "setup": "What's the difference between a hippo and a zippo?",
+    "punchline": "One is really heavy, the other is a little lighter."
+  },
+  {
+    "id": 215,
+    "type": "general",
+    "setup": "What do you call a fake noodle?",
+    "punchline": "An impasta."
+  },
+  {
+    "id": 34,
+    "type": "knock-knock",
+    "setup": "Knock knock. \n Who's there? \n Opportunity.",
+    "punchline": "That is impossible. Opportunity doesn’t come knocking twice!"
+  },
+  {
+    "id": 129,
+    "type": "general",
+    "setup": "How do you make a hankie dance?",
+    "punchline": "Put a little boogie in it."
+  },
+  {
+    "id": 256,
+    "type": "general",
+    "setup": "What is a witch's favorite subject in school?",
+    "punchline": "Spelling!"
+  },
+  {
+    "id": 184,
+    "type": "general",
+    "setup": "What did the fish say when it swam into a wall?",
+    "punchline": "Damn!"
+  }
+]

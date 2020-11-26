@@ -1,14 +1,14 @@
 // import './App.css';
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Info from './Components/03-props/02-Intermediate/Info';
+import ContactEnd from './Components/03-props/Walkthrough/04-End-Contact';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Info/>
+      <ContactEnd/>
     </div>
   );
 }

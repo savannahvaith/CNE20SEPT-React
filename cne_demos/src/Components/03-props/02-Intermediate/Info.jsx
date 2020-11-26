@@ -28,7 +28,6 @@ const Info = () => {
                 numericProp={100}
             />
         </>
-
     );
 
 

@@ -7,11 +7,11 @@ const ComponentWithProps = (props) => {
     // printing an object
     const objectPropsDisplay = []; 
     for(let [k, v] of Object.entries(objectProp)){
-        objectPropsDisplay.push(<p key={k}>The value of {k} in the objectProp is {v}</p>)
+        objectPropsDisplay.push(<li key={k}>The value of {k} in the objectProp is {v}</li>)
     }
 
     // loop through the array and create its own list item 
-    const number = arrayProp.map(seq => <li>Number is {seq}</li>);
+    const number = arrayProp.map(seq => <li key={seq}>Number is {seq}</li>);
 
     return(
         <>
@@ -19,7 +19,7 @@ const ComponentWithProps = (props) => {
             <h1>{props.headerText}</h1>
             <p>The value of the numeric prop is: {numericProp}</p>
             <p> The value of the valueProp is : {valueProp}</p>
-            <p>{objectPropsDisplay}</p>
+            <ol>{objectPropsDisplay}</ol>
             <ol>
                 {number}
             </ol>

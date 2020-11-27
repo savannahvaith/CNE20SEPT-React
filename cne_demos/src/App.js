@@ -4,15 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ComponentWithState from './Components/04-State/UpdatingState/ComponentWithState';
 import DifferentStates from './Components/04-State/UpdatingState/DifferentStates';
 import Clock from './Components/04-State/Clock';
+import Todo from './Components/Todo-Application/Todo';
+import Login from './Components/04-State/Login';
+import Car from './Components/04-State/Car';
 
 
 
 function App() {
   return (
       <>
-        <ComponentWithState/>
+        {/* <ComponentWithState/>
         <DifferentStates/>
-        <Clock/>
+        <Clock/> */}
+        <Todo/>
+        {/* <Login//> */}
+        {/* <Car/> */}
       </>
   );
 }

@@ -1,18 +1,18 @@
 // import './App.css';
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ContactEnd from './Components/03-props/Walkthrough/04-End-Contact';
-import User from './Components/03-props/static-data/User';
-import PropParent from './Components/03-props/PropTypes/Prop-Parent';
-import Pokes from './Components/03-props/static-data/Pokes';
+import ComponentWithState from './Components/04-State/UpdatingState/ComponentWithState';
+import DifferentStates from './Components/04-State/UpdatingState/DifferentStates';
+import Clock from './Components/04-State/Clock';
 
 
 
 function App() {
   return (
       <>
-        <p>Some info</p>
-        <img/>
+        <ComponentWithState/>
+        <DifferentStates/>
+        <Clock/>
       </>
   );
 }

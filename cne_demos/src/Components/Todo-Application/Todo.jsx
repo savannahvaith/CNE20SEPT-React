@@ -1,19 +1,16 @@
 import React from 'react'; 
 import RBButton from './RBButton';
+import TodoList from './TodoList';
 
 const Todo = () => {
 
     return(
         <>
         <div className="todo-list">
-            <input type="checkbox"/>
-            <p>Teach React to CNE cohort</p>
-            <input type="checkbox"/>
-            <p>Take Milo to the vet</p>
-            <input type="checkbox"/>
-            <p>Wash Blue</p>
-            <input type="checkbox"/>
-            <p>Pick up groceries</p>
+           <TodoList description="Teach React to CNE Cohort"/>
+           <TodoList description="Walk Milo"/>
+           <TodoList description="Feed the dog"/>
+           <TodoList description="Cry"/>
         </div>
         <div>
             <RBButton/>

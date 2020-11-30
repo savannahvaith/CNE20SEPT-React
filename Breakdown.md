@@ -50,12 +50,12 @@
       3. The value of the checkbox - **state**
       4. The filtered list of courses - **not state**
    6. Where state lives:
-      1. ![State](https://i.imgur.com/uf0W77J.png)
+      <!-- 1. ![State](https://i.imgur.com/uf0W77J.png) -->
       2. Identify which components should own state:
          1. Identify every component that renders something based on state
          2. Find common owner component for all components using state
          3. If no component makes sense, createa  new component to hold state and add into the hierarchy at an appropriate high level
-      3. ![Hierarchy](https://i.imgur.com/yHwhpOs.png)
+      <!-- 3. ![Hierarchy](https://i.imgur.com/yHwhpOs.png) -->
    7. Adding state:
       1. Demo: `AddingState/ComponentWithState.jsx` and `AddingState/CountUser.jsx`
       2. For a functional component to have state, we need to import `{useState}` from react

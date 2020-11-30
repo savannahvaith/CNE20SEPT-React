@@ -1,24 +1,17 @@
 // import './App.css';
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ComponentWithState from './Components/04-State/UpdatingState/ComponentWithState';
-import DifferentStates from './Components/04-State/UpdatingState/DifferentStates';
-import Clock from './Components/04-State/Clock';
-import Todo from './Components/Todo-Application/Todo';
-import Login from './Components/04-State/Login';
-import Car from './Components/04-State/Car';
+import Basic from './Components/05-forms/ComponentWithUncontrolledInput';
+import ComponentWithControlledInput from './Components/05-forms/ComponentWithControlledInput';
+import SearchableList from './Components/06-Lifting-State/SearchableList';
 
 
 
 function App() {
   return (
       <>
-        {/* <ComponentWithState/>
-        <DifferentStates/>
-        <Clock/> */}
-        <Todo/>
-        {/* <Login//> */}
-        {/* <Car/> */}
+      {/* <ComponentWithControlledInput/> */}
+      <SearchableList/>
       </>
   );
 }

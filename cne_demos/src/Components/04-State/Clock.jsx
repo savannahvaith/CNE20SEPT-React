@@ -1,7 +1,7 @@
 import React, {useState} from 'react'; 
 import { useEffect } from 'react';
 
-const Clock = () => {
+const Clock2 = () => {
 
     let [date,setDate] = useState(new Date().toLocaleTimeString());
 
@@ -24,4 +24,4 @@ const Clock = () => {
     )
 }
 
-export default Clock; 
+export default Clock2; 

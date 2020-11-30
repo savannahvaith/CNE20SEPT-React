@@ -1,10 +1,20 @@
 import React from 'react';
 
-const List = ({ list, stateQuery}) => {
+const List = ({ list, stateQuery, check}) => {
 
     const byQuery = stateQuery => list => !stateQuery || list.title.toLowerCase().includes(stateQuery.toLowerCase());
 
-    const filteredList = list.filter(byQuery(stateQuery));
+    const checked = check => list => list.completed === !check;
+
+    let filteredList; 
+    
+    if(check){
+        filteredList = list.filter(checked(check)).filter(byQuery(stateQuery));
+    }else{
+        filteredList = list.filter(byQuery(stateQuery));
+    }
+    
+    console.log(filteredList);
 
     return (
         <>

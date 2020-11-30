@@ -69,15 +69,33 @@
       2. You should never directly mutate the value of a state, if it needs to be updated, you should use the updator function. Calling the function will tigger a rerender the component, and this will cascade down to any component that uses it via props, if we access it via the state directly this will bypass this process.
       3. Demo `UpdatingState/ComponentWithState.jsx` and `UpdatingState/CountUser.jsx`
 8. Forms and Events
-9. Inverse Data Flow
+   1. Methods to handle events with React Elements is very similar to handling events on DOM elements
+   2. Syntactic differences:
+      1. React events are camcelCased ratherthan lowercase:
+      2. onclick becomes onClick, onmouseover becomes onMouseOver and so on
+      3. With JSX you pass a function as the event handler rather than a string: onclick="clickHandler()" becomes onClick={ () => clickHandler()}
+      4. You cannot return false to prevent default behevaiour use preventDefault();
+      5. Don'y need to call addEventListener() in react, just provide listener when the element is initially rendered
+   3. React Form Components
+      1. Usually want to have access to the form values that have been submitted
+      2. Forms inherently keep some interal state and therefore rEact has to work differently with them
+      3. Any form values are stored in the actual DOM in this situation
+         1. The source of truth is not in the virtual dom and this is not good for REact
+      4. This is known as an uncontrolled component 
+         1. Any value changes will not be recognised by React
+   4. Form Submission
+      1. GET - Appending form data to the url and sending to the server - refreshes, rebuild the dom - loose data. 
+      2. To prevent the default behaviour of clicking submit - we need to intercept the onsubmit event, pass it to a customised submit handler that calls preventDefault
+9.  Inverse Data Flow (`FilterableCoursesTable`)
+    1.  
 10. Working with External Data
-   1. Refreshing the application in the browser will destroy any data created during its life
-   2. Persisting data requires a temporary or permant store
+   5. Refreshing the application in the browser will destroy any data created during its life
+   6. Persisting data requires a temporary or permant store
       1. Local storage - leveraged at a client level
          1. Can be remvoved by the client
          2. Doesn't allow for server level data to be persisted
-   3. Understand the lifecycle, so we can work with the data at the right point
-   4. Component Life cycle overview:
+   7. Understand the lifecycle, so we can work with the data at the right point
+   8. Component Life cycle overview:
       1. Three lifecycle stages
          1. Mounting
          2. Updating
@@ -85,13 +103,13 @@
       2. Life Cycle Phases:
          1. Rendering - Component being creating, or re-rendered. Pure & no side effects, no changes to the state
          2. Commiting - allow dom interactions and schedule updates
-   5. Hooks
-      1. React needed a mechanism to add state to them.
-      2. Main objective: Make any new way of creating components backwards components
-      3. Hooks: Let you hook into react's state and life cycle features
-      4. Class -> function much less syntax required, less to transpile
-      5. Recommended that new components should be build as functional components
-      6. State hook:
+   9.  Hooks
+      3. React needed a mechanism to add state to them.
+      4. Main objective: Make any new way of creating components backwards components
+      5. Hooks: Let you hook into react's state and life cycle features
+      6. Class -> function much less syntax required, less to transpile
+      7. Recommended that new components should be build as functional components
+      8. State hook:
          1. `ExampleWithManyStates.jsx` demos useState():
             1. Allows the addition of local state into a function component
             2. Requires **useState** to be used (this is the hook)
@@ -99,7 +117,7 @@
             4. Returns an array, which has the current state as the first element, and a function to update it as the second element. We deconstruct this array to declare the state, providing the names of the state and the updating function. It's usual for the updating function to have a prefix of 'set' before the states name. States should never be mutated directly - instead using the updator function
             5. Can have more than one state hook in a component - should be declared immediately declared in the body of the component.
             6. States can have any valid javascript value, including Strings, booleans, numbers, values and objects.
-      7. useEffect Hook:
+      9. useEffect Hook:
          1. useEffect() is a replacement for CDM, CDU, and CWU.
          2. It is used to perform side effects on components such as fetching data, subscriptions or manually changing DOM from React Components
          3. UseEffect() runs after React flushes changes to DOM - after every render, including the initial one

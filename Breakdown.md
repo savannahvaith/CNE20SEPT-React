@@ -86,46 +86,45 @@
    4. Form Submission
       1. GET - Appending form data to the url and sending to the server - refreshes, rebuild the dom - loose data. 
       2. To prevent the default behaviour of clicking submit - we need to intercept the onsubmit event, pass it to a customised submit handler that calls preventDefault
-9.  Inverse Data Flow (`FilterableCoursesTable`)
-    1.  
+9. Inverse Data Flow (Lifing State)
 10. Working with External Data
-   5. Refreshing the application in the browser will destroy any data created during its life
-   6. Persisting data requires a temporary or permant store
-      1. Local storage - leveraged at a client level
-         1. Can be remvoved by the client
-         2. Doesn't allow for server level data to be persisted
-   7. Understand the lifecycle, so we can work with the data at the right point
-   8. Component Life cycle overview:
-      1. Three lifecycle stages
-         1. Mounting
-         2. Updating
-         3. Unmounting
-      2. Life Cycle Phases:
-         1. Rendering - Component being creating, or re-rendered. Pure & no side effects, no changes to the state
-         2. Commiting - allow dom interactions and schedule updates
-   9.  Hooks
-      3. React needed a mechanism to add state to them.
-      4. Main objective: Make any new way of creating components backwards components
-      5. Hooks: Let you hook into react's state and life cycle features
-      6. Class -> function much less syntax required, less to transpile
-      7. Recommended that new components should be build as functional components
-      8. State hook:
-         1. `ExampleWithManyStates.jsx` demos useState():
-            1. Allows the addition of local state into a function component
-            2. Requires **useState** to be used (this is the hook)
-            3. Takes an argument of the initial state
-            4. Returns an array, which has the current state as the first element, and a function to update it as the second element. We deconstruct this array to declare the state, providing the names of the state and the updating function. It's usual for the updating function to have a prefix of 'set' before the states name. States should never be mutated directly - instead using the updator function
-            5. Can have more than one state hook in a component - should be declared immediately declared in the body of the component.
-            6. States can have any valid javascript value, including Strings, booleans, numbers, values and objects.
-      9. useEffect Hook:
-         1. useEffect() is a replacement for CDM, CDU, and CWU.
-         2. It is used to perform side effects on components such as fetching data, subscriptions or manually changing DOM from React Components
-         3. UseEffect() runs after React flushes changes to DOM - after every render, including the initial one
-         4. Takes an argument of a callback function to execute when useEffect() is ran
-         5. Declared inside component's body so it and it's callback has access to props and state
-         6. We can have more than one effect hook in a callback
-         7. `Counter.jsx` demos useEffect():
-            1. Allows us to hook into the life cycle components to perform side effects hence is name
+    1. Refreshing the application in the browser will destroy any data created during its life
+    2. Persisting data requires a temporary or permant store
+       1. Local storage - leveraged at a client level
+            1. Can be remvoved by the client
+            2. Doesn't allow for server level data to be persisted
+    3. Understand the lifecycle, so we can work with the data at the right point
+    4. Component Life cycle overview:
+         1. Three lifecycle stages
+            1. Mounting
+            2. Updating
+            3. Unmounting
+         2. Life Cycle Phases:
+            1. Rendering - Component being creating, or re-rendered. Pure & no side effects, no changes to the state
+            2. Commiting - allow dom interactions and schedule updates
+    5. Hooks
+       1. React needed a mechanism to add state to them.
+       2. Main objective: Make any new way of creating components backwards components
+       3. Hooks: Let you hook into react's state and life cycle features
+       4. Class -> function much less syntax required, less to transpile
+       5. Recommended that new components should be build as functional components
+       6. State hook:
+            1. `ExampleWithManyStates.jsx` demos useState():
+               1. Allows the addition of local state into a function component
+               2. Requires **useState** to be used (this is the hook)
+               3. Takes an argument of the initial state
+               4. Returns an array, which has the current state as the first element, and a function to update it as the second element. We deconstruct this array to declare the state, providing the names of the state and the updating function. It's usual for the updating function to have a prefix of 'set' before the states name. States should never be mutated directly - instead using the updator function
+               5. Can have more than one state hook in a component - should be declared immediately declared in the body of the component.
+               6. States can have any valid javascript value, including Strings, booleans, numbers, values and objects.
+       7. useEffect Hook:
+            1. useEffect() is a replacement for CDM, CDU, and CWU.
+            2. It is used to perform side effects on components such as fetching data, subscriptions or manually changing DOM from React Components
+            3. UseEffect() runs after React flushes changes to DOM - after every render, including the initial one
+            4. Takes an argument of a callback function to execute when useEffect() is ran
+            5. Declared inside component's body so it and it's callback has access to props and state
+            6. We can have more than one effect hook in a callback
+            7. `Counter.jsx` demos useEffect():
+            8. Allows us to hook into the life cycle components to perform side effects hence is name
 11. Routing in React
 12. State Management
 13. Testing in React

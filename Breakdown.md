@@ -126,5 +126,5 @@
             7. `Counter.jsx` demos useEffect():
             8. Allows us to hook into the life cycle components to perform side effects hence is name
 11. Routing in React
-12. State Management
+12. State Management (eh)
 13. Testing in React

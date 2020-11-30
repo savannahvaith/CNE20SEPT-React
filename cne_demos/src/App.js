@@ -1,17 +1,14 @@
 // import './App.css';
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Basic from './Components/05-forms/ComponentWithUncontrolledInput';
-import ComponentWithControlledInput from './Components/05-forms/ComponentWithControlledInput';
-import SearchableList from './Components/06-Lifting-State/SearchableList';
+import Calculator from './Components/06-Lifting-State/Exercise/Calculator';
 
 
 
 function App() {
   return (
       <>
-      {/* <ComponentWithControlledInput/> */}
-      <SearchableList/>
+        <Calculator/>
       </>
   );
 }

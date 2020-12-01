@@ -14,8 +14,8 @@ function App() {
     <>
       <Router>
         <Nav/>
-        <Tesco/>
-        {/* <Switch>
+        {/* <Tesco/> */}
+        <Switch>
           <div>
             <Route path="/" exact component={Home}/>
             <Route 
@@ -24,9 +24,10 @@ function App() {
             <Route path="/shop">
               <Shop info="Sav says hi"/>
             </Route>
+            <Route path="/users" component={ListAll}/>
             <Route path="/users/:id" component={Users}/>
           </div>
-        </Switch> */}
+        </Switch>
       </Router>
     </>
   );

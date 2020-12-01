@@ -127,5 +127,37 @@
             8. Allows us to hook into the life cycle components to perform side effects hence is name
    6. UseEffect best place to make network calls - 
 11. Routing in React
+    1.  Single Page Application - React-router standing routing library for React
+    2.  Installation : `npm install react-router-dom --save` needs to be added to the project as a dependency
+    3.  Linking components:
+       1. Wrap an application in a `<Router>` complonent
+       2. `<BrowserRouter>` uses the HTML5 history API to keep UI in sync with the URL
+       3. `<HashRouter>` - Uses hash portion of URL to keep UI in sync
+       4. `<MemoryRouter>` - Keeps history of URL in memory (useful in testing and React Native)
+       5. `<StaticRouter>` - Never changes location – useful in server-side rendering
+    4. Router Components
+       1. Provide `Link` components to create hyperlinks in the appropriate components
+       2. `<Link to="/"> Home </Link>`
+          1. To can be either a string or an object - the object has 4 properties: pathname, search, hash and state
+    5. Adding Links
+       1. We want the users to be able to switch between links - `Nav.jsx`
+    6. Route Components
+       1. We want ot change the views when we click on them thats the job of the route
+       2. `<Route path render_method options>`
+          1. Path - specifies the url  
+          2. Define a route component for every `to` link component you have
+          3. Exact - match only if pathname matches location.pathname exactly
+          4. Object - match path to passed location history
+    7. Defining Routes
+       1. `<Redirect>` - forwards to the 'to' attribute
+       2. `<Switch>` - Match the first matching component to the route
+    8. Parameters
+       1. show Params hooks in dev tools
+    9. Dynamic links
+       1. Link to={`/courses/${id}`}  
+       2. Parameterised Route:
+          1. Routing is part of the UI 
+          2. Nest another link inside the component
+          3. useHistory(), useLocation(), useParams() - useParams() returns an object of the key, set course based on the id
 12. Data Reqiests
 13. Testing in React

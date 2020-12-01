@@ -125,6 +125,7 @@
             6. We can have more than one effect hook in a callback
             7. `Counter.jsx` demos useEffect():
             8. Allows us to hook into the life cycle components to perform side effects hence is name
+   6. UseEffect best place to make network calls - 
 11. Routing in React
-12. State Management (eh)
+12. Data Reqiests
 13. Testing in React

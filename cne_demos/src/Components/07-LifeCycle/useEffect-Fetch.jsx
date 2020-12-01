@@ -7,7 +7,7 @@ const EmployeeInfo = () => {
 
     useEffect(() => {
         axios("http://dummy.restapiexample.com/api/v1/employees")
-        .then( res=> {
+        .then(res=> {
             console.log(res.data)
             setPeople(res.data.data)   
         }) // thumbs up

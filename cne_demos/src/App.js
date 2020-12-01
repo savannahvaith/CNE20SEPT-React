@@ -1,22 +1,34 @@
 // import './App.css';
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Calculator from './Components/06-Lifting-State/Exercise/Calculator';
-import Clock from './Components/07-LifeCycle/Clock';
-import Clock2 from './Components/04-State/Clock';
-import Search from './Components/06-Lifting-State/Search';
-import SearchableList from './Components/06-Lifting-State/SearchableList';
-
-
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Components/08-Routing/Home';
+import About from './Components/08-Routing/About';
+import Shop from './Components/08-Routing/Shop';
+import Nav from './Components/08-Routing/Nav';
+import Users from './Components/08-Routing/Users';
+import Tesco from './Components/09-Data-requests/Tesco';
 
 function App() {
   return (
-      <>
-        {/* <Calculator/> */}
-        {/* <Clock/>
-        <Clock2/> */}
-        <SearchableList/>
-      </>
+    <>
+      <Router>
+        <Nav/>
+        <Tesco/>
+        {/* <Switch>
+          <div>
+            <Route path="/" exact component={Home}/>
+            <Route 
+              path="/about" 
+              component={About}/>
+            <Route path="/shop">
+              <Shop info="Sav says hi"/>
+            </Route>
+            <Route path="/users/:id" component={Users}/>
+          </div>
+        </Switch> */}
+      </Router>
+    </>
   );
 }
 export default App;

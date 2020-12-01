@@ -3,7 +3,7 @@ const Human = ({obj}) => {
 return( 
 
     <>
-        <li >{obj.employee_name}</li>
+        <li>{obj.employee_name}</li>
     </>
 
 

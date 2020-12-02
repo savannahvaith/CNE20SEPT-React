@@ -24,8 +24,9 @@ function App() {
             <Route path="/shop">
               <Shop info="Sav says hi"/>
             </Route>
-            <Route path="/users" component={ListAll}/>
+            {/* <Route path="/users" component={ListAll}/> */}
             <Route path="/users/:id" component={Users}/>
+            <Route path="/tesco" component={Tesco}/>
           </div>
         </Switch>
       </Router>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import Human from './Human';
 
@@ -8,30 +9,40 @@ const Tesco = () => {
     const [humans, setHumans] = useState([]);
 
     useEffect(() => {
-        // setTimeout(() => {
-            axios.get("http://dummy.restapiexample.com/api/v1/employees",
-                {
-                    headers: {
-                        'Access-Control-Allow-Origin' : '*'
-                    }
-                }
-            )
-                // .then(res => res)
-                .then((hello) => {
-                    setLoaded(true);
-                    console.log(hello);
-                    setHumans(hello.data.data);
-                }, (error) => {
-                    setLoaded(true);
-                    setError(error);
-                })
-        // }, 4000)
+
+        // setTimeout( () => { // dosomething } , //timeinMS );
+
+        setTimeout(() => {
+        axios.get("http://dummy.restapiexample.com/api/v1/employees",
+            // {
+            //     headers: {
+            //         'Access-Control-Allow-Origin' : '*'
+            //     }
+            // }
+        )
+            // .then(res => res)
+            .then((hello) => {
+                setLoaded(true);
+                console.log(hello);
+                setHumans(hello.data.data);
+            }, (error) => {
+                setLoaded(true);
+                setError(error);
+            })
+        }, 4000)
     }, [])
 
     if (error) {
         return <p>Oops.. something has happened... {error.message}</p>
     } else if (!isLoaded) {
-        return <p> Please wait.... we are loading your information</p>
+        return (
+            <>
+                <p> Please wait.... we are loading your information</p>
+                <Spinner animation="border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </Spinner>
+            </>
+        )
     } else {
         return (
             <>

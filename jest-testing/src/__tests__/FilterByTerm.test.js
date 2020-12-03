@@ -37,6 +37,6 @@ describe(`filter by term tests`, () => {
             { id: 3, url: "https://url3.dev" },
             { id: 4, url: "https://link3.dev" }
         ];
-        expect( ()=> {filterByTerm(input, "")}).toThrowError(Error("searchTerm cannot be empty"));
+        expect(()=> {filterByTerm(input, "")}).toThrowError(Error("searchTerm cannot be empty"));
     })
 })

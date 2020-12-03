@@ -3,6 +3,14 @@ import App from '../App';
 import '@testing-library/jest-dom';
 import {create} from 'react-test-renderer';
 
+// add a jest mock function 
+// create my own implementation of a component to override te default
+jest.mock(`../Components/ComponentWithProps`, () => {
+  return function ComponentWithPropsMock(props){
+    return(<p>Mocked componentswithprops</p>)
+  }
+});
+
 test.skip('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);

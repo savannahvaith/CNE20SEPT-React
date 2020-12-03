@@ -18,14 +18,16 @@ describe(`Component with props render Tests`, () => {
         arrayProp:[1,2,3]
     }
 
+
     let componentToTest; 
 
     beforeEach( () => {
         const TestInstance = create(<ComponentWithProps {...props}/>)
         componentToTest = TestInstance.root;
+        console.log(componentToTest);
     });
 
-    it(`Should render "A header" in a h1`, () => {
+    it.skip(`Should render "A header" in a h1`, () => {
         const h1Render = componentToTest.findByType(`h1`); // one specific elemeent in the tree
         // console.log(h1Render.children);
         expect(h1Render.children).toEqual([props.headerText]);
@@ -34,20 +36,19 @@ describe(`Component with props render Tests`, () => {
     it.skip(`should render the text "Some Content¬ in the first P element`, () => {
         const firstP = componentToTest.findAllByType(`p`)[0];
         expect(firstP.children).toEqual([props.contentProp]);
-    })
+    });
 
     it(`should render the first p tag`, () => {
         const num = componentToTest.findByProps({ className: "cpo"});
+        console.log("NUM: "+ num);
+        console.log("NUM.CHILDREN " + num.children);
         expect(num.children).toEqual([props.contentProp])
-    })
+    });
 
-    it(`should render the text array`, () => {
+    it.skip(`should render the text array`, () => {
         const num = componentToTest.findAllByProps({className: "nnd"});
         for(let i=0; i<props.arrayProp.length; i++){
             expect(num[i].children).toContain(props.arrayProp[i].toString());
         }
-    })
-
-
-
+    });
 })

@@ -28,5 +28,8 @@ exports[`Snapshot test of App  it should match the snapshot every time it is ren
       Learn how to write in React
     </a>
   </header>
+  <p>
+    Mocked componentswithprops
+  </p>
 </div>
 `;

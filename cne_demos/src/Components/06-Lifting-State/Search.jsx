@@ -4,7 +4,7 @@ const Search = ({ stateQuery, updateState , check, updateCheck}) => {
 
     return (
         <>
-            <input type="text" value={stateQuery} onChange={updateState} />
+            <input type="text" value={stateQuery} onChange={updateState, updateCheck} />
             <label> Only show Uncompleted tasks:</label>
             <input type="checkbox" checked={check} onChange={updateCheck} />
         </>

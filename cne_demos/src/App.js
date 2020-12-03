@@ -2,22 +2,23 @@
 import './Resources/CSS/Todo.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Components/08-Routing/Home';
+
 import About from './Components/08-Routing/About';
 import Shop from './Components/08-Routing/Shop';
 import Nav from './Components/08-Routing/Nav';
 import Users from './Components/08-Routing/Users';
 import Tesco from './Components/09-Data-requests/Tesco';
+import SearchableList from './Components/06-Lifting-State/SearchableList';
 
 function App() {
   return (
     <>
       <Router>
         <Nav/>
-        {/* <Tesco/> */}
+        <Tesco/>
         <Switch>
           <div>
-            <Route path="/" exact component={Home}/>
+            {/* <Route path="/" exact component={Home}/> */}
             <Route 
               path="/about" 
               component={About}/>

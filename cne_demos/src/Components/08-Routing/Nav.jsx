@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './Home';
 import { Link } from 'react-router-dom';
 const Nav = () => {
     return (

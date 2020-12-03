@@ -1,7 +1,22 @@
 import logo from './Resources/logo.svg';
 import './Resources/App.css';
+import ComponentWithProps from './Components/ComponentWithProps';
 
 function App() {
+  const props = {
+    headerText: `A header`,
+    contentProp: `Some Content`,
+    numericProp: 100,
+    valueProp: 10000,
+    expressionProp: 2 + 2,
+    functionProp: () => `hello world`,
+    objectProp: {
+      key1: `key1 value`,
+      key2: 2,
+      key3: [`key3`, `array`, `values`]
+    },
+    arrayProp: [1, 2, 3]
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +33,7 @@ function App() {
           Learn how to write in React
         </a>
       </header>
+      <ComponentWithProps {...props}/>
     </div>
   );
 }

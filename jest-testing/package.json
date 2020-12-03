@@ -37,5 +37,14 @@
   },
   "devDependencies": {
     "react-test-renderer": "^17.0.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/serviceWorker.js",
+      "!**/index.js"
+    ]
   }
 }

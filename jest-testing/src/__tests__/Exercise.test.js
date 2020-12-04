@@ -48,9 +48,9 @@ describe(`Form Testing`, () => {
         fireEvent.click(submitButton); // clicks the submit button
 
         // assert
-        // expect(mockSubmitFunction).toHaveBeenCalled(); // its calling the function 
-        expect(mockSubmitFunction).toHaveBeenCalledTimes(5);
-        // expect(mockSubmitFunction).toHaveBeenCalledWith({ username : data, email : emailInfo });
+        expect(mockSubmitFunction).toHaveBeenCalled(); // its calling the function 
+        expect(mockSubmitFunction).toHaveBeenCalledTimes(1);
+        expect(mockSubmitFunction).toHaveBeenCalledWith({ username : data, email : emailInfo });
 
     });
 

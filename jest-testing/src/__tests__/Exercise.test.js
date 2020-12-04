@@ -51,7 +51,5 @@ describe(`Form Testing`, () => {
         expect(mockSubmitFunction).toHaveBeenCalled(); // its calling the function 
         expect(mockSubmitFunction).toHaveBeenCalledTimes(1);
         expect(mockSubmitFunction).toHaveBeenCalledWith({ username : data, email : emailInfo });
-
     });
-
 });

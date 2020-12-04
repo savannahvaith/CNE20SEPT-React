@@ -5,7 +5,7 @@ const Form = ({ submit }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        submit({submit});
+        submit({name});
     }
 
     return (

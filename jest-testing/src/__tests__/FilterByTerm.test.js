@@ -39,4 +39,9 @@ describe(`filter by term tests`, () => {
         ];
         expect(()=> {filterByTerm(input, "")}).toThrowError(Error("searchTerm cannot be empty"));
     })
+
+    //syntax
+    test("string", () => {
+        //code
+    }); 
 })

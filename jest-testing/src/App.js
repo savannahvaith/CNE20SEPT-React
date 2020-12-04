@@ -1,6 +1,7 @@
 import logo from './Resources/logo.svg';
 import './Resources/App.css';
 import ComponentWithProps from './Components/ComponentWithProps';
+import Form from './Components/Form';
 
 function App() {
   const props = {
@@ -33,7 +34,8 @@ function App() {
           Learn how to write in React
         </a>
       </header>
-      <ComponentWithProps {...props}/>
+      {/* <ComponentWithProps {...props}/> */}
+      <Form/>
     </div>
   );
 }

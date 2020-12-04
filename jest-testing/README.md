@@ -6,3 +6,12 @@
 - Forms
 - Snapshot Testing
 - and more...
+
+To run tests execute command:
+`npm test`
+
+Coverage: 
+`npm test -- --coverage`
+
+Specific files
+`npm test -- filename.test.js`

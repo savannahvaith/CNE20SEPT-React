@@ -13,13 +13,7 @@ const Tesco = () => {
         // setTimeout( () => { // dosomething } , //timeinMS );
 
         setTimeout(() => {
-        axios.get("http://dummy.restapiexample.com/api/v1/employees",
-            // {
-            //     headers: {
-            //         'Access-Control-Allow-Origin' : '*'
-            //     }
-            // }
-        )
+        axios.get("http://dummy.restapiexample.com/api/v1/employees")
             // .then(res => res)
             .then((hello) => {
                 setLoaded(true);
